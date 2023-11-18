@@ -32,6 +32,11 @@ local function vsplit_preview()
   api.tree.focus()
 end
 
+on_attach = funtion(bufnr)
+  local function opts(desc)
+    return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
 -- global
 vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeToggle<cr>", {silent = true, noremap = true})
 
