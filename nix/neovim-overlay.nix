@@ -45,6 +45,7 @@ with final.pkgs.lib; let
     nvim-navic # Add LSP location to lualine | https://github.com/SmiteshP/nvim-navic
     statuscol-nvim # Status column | https://github.com/luukvbaal/statuscol.nvim/
     nvim-treesitter-context # nvim-treesitter-context
+    nvim-tree-lua # https://github.com/nvim-tree/nvim-tree.lua/ 
     # ^ UI
     # language support
     neodev-nvim # adds support for Neovim's Lua API to lua-language-server | https://github.com/folke/neodev.nvim/
