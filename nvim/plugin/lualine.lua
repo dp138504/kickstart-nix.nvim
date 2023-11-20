@@ -37,8 +37,8 @@ require('lualine').setup {
   options = {
     theme = 'auto',
     disabled_filetypes = {
-      statusline = { 'NvimTree' },
-      winbar = { 'NvimTree' },
+      statusline = { 'NvimTree', 'ToggleTerm' },
+      winbar = { 'NvimTree', 'ToggleTerm' },
     },
   },
   -- Example top tabline configuration (this may clash with other plugins)

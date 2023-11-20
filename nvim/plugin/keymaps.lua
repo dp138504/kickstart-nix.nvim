@@ -182,7 +182,7 @@ keymap.set('n', '<C-f>', '<C-f>zz', { desc = 'move down full-page and center' })
 keymap.set('n', '<C-b>', '<C-b>zz', { desc = 'move up full-page and center' })
 
 --- User Keymaps
-keymap.set('n', '<C-<Bslash>>', ':ToggleTerm<CR>', { desc = 'Open terminal' })
+keymap.set('n', '<leader>tt', ':ToggleTerm<CR>', { desc = '[toggleterm] Toggle terminal window' })
 
 --- Disabled keymaps [enable at your own risk]
 
