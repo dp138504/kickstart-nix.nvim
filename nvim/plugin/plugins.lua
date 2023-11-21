@@ -2,8 +2,4 @@
 -- even with default configs
 
 require('nvim-surround').setup()
-require('toggleterm').setup({
-  winbar = {
-    enabled = false
-  }
-})
+require('toggleterm').setup()
