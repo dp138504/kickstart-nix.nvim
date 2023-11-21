@@ -27,6 +27,9 @@ end
 -- Search down into subfolders
 opt.path = vim.o.path .. '**'
 
+opt.timeout = true
+opt.timeoutlen = 500
+
 opt.number = true
 opt.relativenumber = true
 opt.cursorline = true

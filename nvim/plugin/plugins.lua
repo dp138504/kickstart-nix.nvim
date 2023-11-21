@@ -3,3 +3,5 @@
 
 require('nvim-surround').setup()
 require('toggleterm').setup()
+require("which-key").setup({})
+
