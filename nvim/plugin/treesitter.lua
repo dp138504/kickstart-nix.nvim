@@ -76,14 +76,18 @@ configs.setup {
       },
     },
   },
-  context_commentstring = {
-    enable = true,
-  },
+--  context_commentstring = {
+--    enable = true,
+--  },
 }
 
 require('treesitter-context').setup {
   max_lines = 3,
 }
+
+-- As recommended by the deprecation warning
+require('ts_context_commentstring').setup { }
+vim.g.skip_ts_context_commentstring_module = true
 
 -- Tree-sitter based folding
 -- vim.opt.foldmethod = 'expr'
