@@ -2,6 +2,7 @@ local cmd = vim.cmd
 local fn = vim.fn
 local opt = vim.o
 local g = vim.g
+local uv = vim.uv
 
 -- <leader> key. Defaults to `\`. Some people prefer space.
 g.mapleader = ' '
@@ -122,3 +123,11 @@ cmd.packadd('cfilter') -- Allows filtering the quickfix list with :cfdo
 
 -- let sqlite.lua (which some plugins depend on) know where to find sqlite
 vim.g.sqlite_clib_path = require('luv').os_getenv('LIBSQLITE')
+
+vim.api.nvim_create_autocmd({ 'VimEnter', 'VimLeave' }, {
+	callback = function()
+		if vim.env.TMUX_WINDOW_NAME_PATH then
+			uv.spawn(vim.env.TMUX_WINDOW_NAME_PATH .. '/tmux-window-name/scripts/rename_session_windows.py', {})
+		end
+	end,
+})
